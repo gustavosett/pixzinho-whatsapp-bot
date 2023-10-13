@@ -1,0 +1,6 @@
+/virtualenv
+.env
+*.pyc
+error_logs.txt
+*.db
+openapi.json
