@@ -1,22 +1,22 @@
-# Use an official Python runtime as a parent image
+# Use uma imagem oficial do Python como imagem mãe
 FROM python:3.11-slim-bullseye
 
-# Set the working directory in the container
+# Define o diretório de trabalho no container
 WORKDIR /usr/src/app
 
-# Copy the current directory contents into the container at /usr/src/app
+# Copia o conteúdo do diretório atual para o container em /usr/src/app
 COPY prod_requirements.txt ./
 COPY setup.py ./
 COPY ./app ./app
 
-# Install any needed packages specified in requirements.txt
+# Instala os pacotes necessários especificados em requirements.txt
 RUN pip install --no-cache-dir -r prod_requirements.txt
 
-# Expose the port the app runs on
+# Expõe a porta na qual o aplicativo é executado
 EXPOSE 8000
 
-# Define environment variable
+# Define a variável de ambiente
 ENV NAME PixzinhoBot
 
-# Run app.py when the container launches
+# Executa app.py quando o container é iniciado
 CMD ["python", "setup.py"]
