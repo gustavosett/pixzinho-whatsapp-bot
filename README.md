@@ -1,6 +1,6 @@
 # Pixzinho Bot
 
-![Banner ou Logo do Projeto](src/banner.png)
+![Banner ou Logo do Projeto](misc/banner.png)
 
 O **Pixzinho Bot** é um assistente virtual financeiro robusto e gratuito, desenvolvido para ajudar os usuários a gerenciar suas finanças pessoais, interagindo através do WhatsApp e utilizando a tecnologia de processamento de linguagem natural do GPT.
 
