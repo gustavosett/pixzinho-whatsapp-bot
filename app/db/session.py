@@ -6,12 +6,13 @@ author: github.com/gustavosett
 """
 
 from contextlib import contextmanager
+from os import getenv
 from sqlalchemy import create_engine, event
 from sqlalchemy.orm import sessionmaker, scoped_session, declarative_base
 from sqlalchemy_utils import database_exists, create_database
 
 # Endereço
-SQL_DATABASE_ALCHEMY_URL = "sqlite:///./sql_app.db"
+SQL_DATABASE_ALCHEMY_URL = getenv("DATABASE_URL")
 
 
 # Conexão
